@@ -595,6 +595,11 @@
             <li><a href="terms.html">Terms of Service</a></li>
           </ul>
         </div>
+        <script> 
+          const d = new Date();
+          const formattedDate = d.toISOString().split('T')[0];
+          document.getElementById("deployDate").textContent = formattedDate;
+        </script>
 
       </div>
 
@@ -602,7 +607,7 @@
       <div class="footer-bottom">
         <p>© <span id="year"></span> Pravin Mishra. All rights reserved.</p>
         <p>Crafted with <span>cloud</span> excellence by Pravin Mishra</p>
-        <p>Pravin Mishra Portfolio v1.0 — Deployed on <DD Mon YYYY> — Chandan Kumar Kushwaha</p>
+        <p>Pravin Mishra Portfolio v1.0 — Deployed on <span id="deployDate">06 Feb 2026</span> — By Chandan Kumar Kushwaha</p>
       </div>
 
     </div>
