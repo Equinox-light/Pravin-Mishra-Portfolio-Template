@@ -24,19 +24,23 @@ A portfolio-style website hosted on:
 
 ---
 
-## Mandatory Ownership Proof (DMI Rule)
-Before you deploy, you MUST edit the footer and add your details:
+## How to add dynamic date:
+Before you deploy, you MUST edit the footer and deploy date dynamic:
 
 Original:
 
 ```html
-<p>Crafted with <span>cloud</span> excellence by Pravin Mishra</p>
+Add a <span id="deployDate"></span> in footer where date goes
 ```
 
-Add this line (example):
+Add this code snippet:
 
 ```html
-<p><strong>Deployed by:</strong> DMI Cohort 2 | Rahul Sharma | Group 4 | Week 1 | 16-01-2026</p>
+<script> 
+          const d = new Date();
+          const formattedDate = d.toISOString().split('T')[0];
+          document.getElementById("deployDate").textContent = formattedDate;
+        </script>
 ```
 
 ✅ This proof must be visible in your browser screenshot submission.
